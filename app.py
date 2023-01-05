@@ -5,7 +5,7 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 # Setting up the database engine
 engine = create_engine("sqlite:///hawaii.sqlite")
@@ -32,16 +32,9 @@ app = Flask(__name__)
 
 @app.route('/')
 
-def welcome():
-    return(
-        '''
-        Welcom to the Climate Analysis API!
-        Available Routes:
-        /api/v1.0/precipitation
-        /api/v1.0/stations
-        /api/v1.0/tobs
-        /api/v1.0/temp/start/end 
-        ''')
+def index():
+    return render_template("index.html")
+     
 # When creating routes, we follow the naming convention /api/v1.0/ followed by the name of the route.
 # This convention signifies that this is version 1 of our application.
 
@@ -99,3 +92,6 @@ def stats(start=None, end=None):
         filter(Measurement.date <= end).all()
     temps = list(np.ravel(results))
     return jsonify(temps)
+
+if __name__ == "__main__":
+   app.run() 
