@@ -18,3 +18,13 @@ From the same database of temperature readings we had a pool of 1500 unique reco
 
 ### Summary 
 Based on these two months of data it would seem that the weather in Oahu is steady enough to be perfect for this business modal. My only concern would be the percipitation. I would think that if there is a high amount of rain during a certian time of the year, that would potentailly hinder business.
+
+
+### API App
+If you want to be able to call upon specific datas in the data there is an app.py that you can run using flask to better view the data.
+Make sure to have these packeges installed:
+* python
+* numpy
+* pandas
+* sqlalchemy
+* flask
