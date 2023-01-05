@@ -1,9 +1,26 @@
 <html>
   <head>
     <title>Climate API</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <style>
-      
+        body {
+            font-family: Arial, sans-serif;
+          }
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+          }
+          li {
+            display: inline-block;
+            margin: 0 10px;
+          }
+          a {
+            color: #333;
+            text-decoration: none;
+          }
+          a:hover {
+            color: #00bfff;
+          }
     </style>
   </head>
   <body>
@@ -13,8 +30,8 @@
       <li><a href="/api/v1.0/precipitation">/api/v1.0/precipitation</a></li><br>
       <li><a href="/api/v1.0/stations">/api/v1.0/stations</a></li><br>
       <li><a href="/api/v1.0/tobs">/api/v1.0/tobs</a></li><br>
-      <li><a href="/api/v1.0/start/end">/api/v1.0/temp/start/end</a></li>
-      <p>add start and end dates to recive min, avg, and max for that range</p>
+      <li><a href="/api/v1.0/start/end">/api/v1.0/temp/start/end</a><p>(add start  and end dates 'YYYY-MM-DD' to recive min, avg, and max for inputed range)</p></li>
+      
     </ul>
   </body>
 </html>
